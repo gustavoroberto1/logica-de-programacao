@@ -1,8 +1,14 @@
-import leia from 'readline-sync';
+import leia from 'readline-sync'
 
-var nota = leia.questionFloat("DIGITE A NOTA: ");
-while(nota < 0.0 || nota > 10.0){
-    console.log("NOTA INVALIDA")
-    nota = leia.questionFloat("DIGITE A NOTA NOVAMENTE: ");
+var n1 = leia.questionInt("DIGITE PRIMEIRO NUMERO: ");
+var n2 = leia.questionInt("DIGITE SEGUNDO NUMERO: ");
+var passo = leia.questionInt("NUMERO DE PASSOS");
+
+while(n1 <= n2){
+    console.log(n1);
+    n1 += passo;
 }
-console.log("NOTA VALIDA")
+
+for(var i = n1; i <= n2; i += passo){
+    console.log(i);
+}
