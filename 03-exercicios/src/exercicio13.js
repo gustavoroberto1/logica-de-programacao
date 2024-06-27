@@ -1,13 +1,13 @@
 import leia from 'readline-sync';
 
-var decimal = leia.questionInt("DIGITE UM NUMERO INTEIRO");
-var binario = "";
+var decimal = leia.questionInt("DIGITE UM NUMERO");
+var binario = '';
 
-while(decimal > 0){
-    var resultado = parseInt(decimal / 2);
+while(decimal >= 1){
+    var result = parseInt(decimal / 2);
     var resto = decimal % 2;
+    decimal = result;
     binario = resto + binario;
-    decimal = resultado;
 }
 
 console.log(binario)
