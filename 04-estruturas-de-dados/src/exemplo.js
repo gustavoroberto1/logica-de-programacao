@@ -1,5 +1,14 @@
-var lista = ["Gustavo", "Roberto"]
+import leia from 'readline-sync'
+var lista = [];
 
-for(var i = 0; i < lista.length; i++){
-    console.log(lista[i])
+var i = 4;
+while(i >= 0){
+    lista[i] = leia.question("DIGITE UM NOME: ")
+    i--;
 }
+var soma = 0;
+for(var j = 0; j < lista.length; j++){
+    console.log(lista[j])
+    soma += lista[j]
+}
+
