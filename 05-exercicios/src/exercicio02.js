@@ -1,23 +1,16 @@
 import { preencherVetor } from './utils/preencherVetor.js'
+import { verificaDuplicidade } from './utils/verificaDuplicidade.js'
 
-var vetor = preencherVetor(10, 0, 50);
-
-function verificaDuplicidade(vetor) {
-    for (var i = 0; i < vetor.length; i++) {
-        for (var j = i; j < vetor.length; j++) {
-            if (j !== i && vetor[i] === vetor[i]) {
-                return true;
-            }
-        }
+export function exercicio02() {
+    var vetor = preencherVetor(10, 0, 50);
+    var temDuplicidade = verificaDuplicidade(vetor);
+    console.log(vetor)
+    if (temDuplicidade) {
+        console.log("TEM DUPLICIDADE")
+    } else {
+        console.log("NÃO TEM DUPLICIDADE")
     }
-    return false;
 }
 
-var temDuplicidade = verificaDuplicidade(vetor);
-if(temDuplicidade){
-    console.log("TEM DUPLICIDADE")
-}else {
-    console.log("NÃO TEM DUPLICIDADE")
-}
 
 
